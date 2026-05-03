@@ -41,7 +41,7 @@ export default function Booking() {
           className="flex justify-center"
         >
           <iframe
-            src="https://www.zentime.io/embed/kalender/d4f07d7e-dba6-408b-9354-a5f8827325fd"
+            src="https://buchung.treatwell.de/ort/kawaii-nails/"
             width="100%"
             height="720"
             frameBorder="0"
