@@ -75,12 +75,12 @@ export default function Gallery() {
           className="text-center mt-12"
         >
           <a
-            href="https://instagram.com/kawaii.nails.berlin"
+            href="https://www.instagram.com/kawaiinailskoeln/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 font-lato text-[#C9A84C] hover:text-[#A07830] font-bold border-b-2 border-[#C9A84C] pb-1 transition-colors duration-200"
           >
-            Mehr auf Instagram →
+            @kawaiinailskoeln auf Instagram →
           </a>
         </motion.div>
       </div>
