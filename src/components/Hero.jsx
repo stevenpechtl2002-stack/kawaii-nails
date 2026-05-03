@@ -88,70 +88,104 @@ export default function Hero() {
       {petals.map((id) => <Petal key={id} id={id} />)}
       {glitter.map((id) => <GlitterDot key={id} id={id} />)}
 
-      <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="font-lato text-[#C9A84C] tracking-[0.3em] uppercase text-sm font-bold mb-6"
-        >
-          Nagelsalon Berlin
-        </motion.p>
+      <div className="relative z-10 w-full max-w-6xl mx-auto px-6 flex flex-col lg:flex-row items-center justify-between gap-12">
+        <div className="text-center lg:text-left max-w-xl">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="font-lato text-[#C9A84C] tracking-[0.3em] uppercase text-sm font-bold mb-6"
+          >
+            Nagelsalon Berlin
+          </motion.p>
 
-        <h1 className="font-playfair text-5xl md:text-7xl font-bold text-[#5a4a52] leading-tight mb-6">
-          {headingWords.map((word, i) => (
-            <motion.span
-              key={word}
-              className="inline-block mr-4"
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 + i * 0.15 }}
+          <h1 className="font-playfair text-5xl md:text-6xl font-bold text-[#5a4a52] leading-tight mb-6">
+            {headingWords.map((word, i) => (
+              <motion.span
+                key={word}
+                className="inline-block mr-3"
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 + i * 0.15 }}
+              >
+                {word}
+              </motion.span>
+            ))}
+          </h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1.1 }}
+            className="font-lato text-[#7a6a72] text-lg md:text-xl mb-10 leading-relaxed"
+          >
+            Wir zaubern dir Nägel, die zu dir passen — verspielt, elegant und immer einzigartig.
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 1.3 }}
+            className="flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-4"
+          >
+            <a
+              href="#termin"
+              className="bg-[#C9A84C] hover:bg-[#A07830] text-white font-lato font-bold text-base px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
             >
-              {word}
-            </motion.span>
-          ))}
-        </h1>
+              ✨ Termin buchen
+            </a>
+            <a
+              href="#leistungen"
+              className="bg-white/70 hover:bg-white text-[#5a4a52] font-lato font-bold text-base px-8 py-4 rounded-full border border-[#FFB5C8] hover:border-[#C9A84C] transition-all duration-300"
+            >
+              Unsere Leistungen
+            </a>
+          </motion.div>
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 1.1 }}
-          className="font-lato text-[#7a6a72] text-lg md:text-xl mb-10 max-w-xl mx-auto leading-relaxed"
-        >
-          Wir zaubern dir Nägel, die zu dir passen — verspielt, elegant und immer einzigartig.
-        </motion.p>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.8, duration: 0.8 }}
+            className="mt-10 flex items-center justify-center lg:justify-start gap-6 text-sm font-lato text-[#7a6a72]"
+          >
+            <span>⭐ 4.9 Google</span>
+            <span className="w-px h-4 bg-[#FFB5C8]" />
+            <span>500+ Kunden</span>
+            <span className="w-px h-4 bg-[#FFB5C8]" />
+            <span>Berlin Mitte</span>
+          </motion.div>
+        </div>
 
         <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, delay: 1.3 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
+          initial={{ opacity: 0, x: 60, scale: 0.95 }}
+          animate={{ opacity: 1, x: 0, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="hidden lg:block relative flex-shrink-0"
         >
-          <a
-            href="#termin"
-            className="bg-[#C9A84C] hover:bg-[#A07830] text-white font-lato font-bold text-base px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-          >
-            ✨ Termin buchen
-          </a>
-          <a
-            href="#leistungen"
-            className="bg-white/70 hover:bg-white text-[#5a4a52] font-lato font-bold text-base px-8 py-4 rounded-full border border-[#FFB5C8] hover:border-[#C9A84C] transition-all duration-300"
-          >
-            Unsere Leistungen
-          </a>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.8, duration: 0.8 }}
-          className="mt-16 flex items-center justify-center gap-6 text-sm font-lato text-[#7a6a72]"
-        >
-          <span>⭐ 4.9 Google</span>
-          <span className="w-px h-4 bg-[#FFB5C8]" />
-          <span>500+ zufriedene Kunden</span>
-          <span className="w-px h-4 bg-[#FFB5C8]" />
-          <span>Berlin Mitte</span>
+          <div className="relative w-80 h-96">
+            <img
+              src="/images/nails-ombre-glitter.jpg"
+              alt="Kawaii Nails Beispiel"
+              className="w-full h-full object-cover rounded-[2.5rem] shadow-2xl"
+              style={{ boxShadow: '0 20px 60px rgba(255,181,200,0.5)' }}
+            />
+            <motion.div
+              animate={{ y: [0, -8, 0] }}
+              transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+              className="absolute -top-4 -right-4 bg-white rounded-2xl shadow-lg p-3"
+            >
+              <p className="font-playfair text-xs text-[#5a4a52] font-semibold">Kawaii Nails</p>
+              <p className="font-lato text-xs text-[#C9A84C]">✨ Berlin</p>
+            </motion.div>
+            <motion.div
+              animate={{ y: [0, 8, 0] }}
+              transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
+              className="absolute -bottom-4 -left-4 bg-white rounded-2xl shadow-lg p-3"
+            >
+              <p className="font-lato text-xs text-[#7a6a72]">⭐ 4.9</p>
+              <p className="font-playfair text-xs font-bold text-[#5a4a52]">Top bewertet</p>
+            </motion.div>
+          </div>
         </motion.div>
       </div>
 

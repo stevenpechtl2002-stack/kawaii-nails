@@ -45,18 +45,27 @@ export default function About() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="relative"
           >
-            <div
-              className="rounded-3xl overflow-hidden aspect-[4/5] flex items-center justify-center relative"
-              style={{ background: 'linear-gradient(135deg, #FFD6E3 0%, #FFE4CC 100%)' }}
-            >
-              <div className="text-center">
-                <div className="text-7xl mb-4">💆‍♀️</div>
-                <p className="font-lato text-[#7a6a72] text-sm">Team-Foto kommt bald</p>
-              </div>
-              <div className="absolute top-4 right-4 bg-white/80 backdrop-blur rounded-2xl p-3 shadow-sm">
-                <p className="font-playfair text-xs text-[#5a4a52] font-semibold">Kawaii Nails</p>
-                <p className="font-lato text-xs text-[#C9A84C]">Berlin Mitte ✨</p>
-              </div>
+            <div className="grid grid-cols-2 gap-3">
+              <img
+                src="/images/salon-overview.jpg"
+                alt="Salon Übersicht"
+                className="rounded-2xl w-full h-56 object-cover col-span-2 shadow-md"
+              />
+              <img
+                src="/images/salon-station.jpg"
+                alt="Nagelstation"
+                className="rounded-2xl w-full h-40 object-cover shadow-md"
+              />
+              <img
+                src="/images/salon-pedicure.jpg"
+                alt="Pediküre Bereich"
+                className="rounded-2xl w-full h-40 object-cover shadow-md"
+              />
+            </div>
+
+            <div className="absolute top-4 right-4 bg-white/80 backdrop-blur rounded-2xl p-3 shadow-sm">
+              <p className="font-playfair text-xs text-[#5a4a52] font-semibold">Kawaii Nails</p>
+              <p className="font-lato text-xs text-[#C9A84C]">Berlin Mitte ✨</p>
             </div>
 
             <motion.div

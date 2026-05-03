@@ -30,8 +30,7 @@ export default function Navbar() {
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         <a href="#" className="flex items-center gap-2">
-          <span className="text-2xl">🌸</span>
-          <span className="font-playfair font-bold text-xl text-[#5a4a52]">Kawaii Nails</span>
+          <img src="/images/logo.png" alt="Kawaii Nails Logo" className="h-10 w-auto" />
         </a>
 
         <ul className="hidden md:flex items-center gap-8">
