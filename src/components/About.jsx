@@ -21,7 +21,7 @@ export default function About() {
               Wenn Nägel zu echten Kunstwerken werden sollen, sind wir die perfekte Adresse! Wir von Kawaii Nails erfüllen Deine Wünsche für tolle, kreative Nageldesigns.
             </p>
             <p className="font-lato text-[#7a6a72] leading-relaxed mb-8">
-              Besuche unseren Salon im Kölner Stadtteil Ehrenfeld und lass es dir mal wieder richtig gut gehen! Wir freuen uns auf dich — buche deinen Termin einfach online oder per WhatsApp.
+              Besuche unseren Salon im Kölner Stadtteil Ehrenfeld und lass es dir mal wieder richtig gut gehen! Wir freuen uns auf dich — buche deinen Termin einfach online.
             </p>
 
             <div className="grid grid-cols-3 gap-6">

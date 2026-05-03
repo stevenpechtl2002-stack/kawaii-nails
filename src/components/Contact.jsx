@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 const info = [
   { icon: '📍', label: 'Adresse', value: 'Venloer Straße 305, 50823 Köln (Ehrenfeld)' },
   { icon: '📞', label: 'Telefon', value: '(+49) 221 168 540 93', href: 'tel:+4922116854093' },
-  { icon: '💬', label: 'WhatsApp', value: '0221-16854093', href: 'https://wa.me/4922116854093' },
+
   { icon: '✉️', label: 'E-Mail', value: 'kawaiinails@hotmail.de', href: 'mailto:kawaiinails@hotmail.de' },
   { icon: '📸', label: 'Instagram', value: '@kawaiinailskoeln', href: 'https://www.instagram.com/kawaiinailskoeln/' },
 ]
