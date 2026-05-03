@@ -1,0 +1,75 @@
+import { motion } from 'framer-motion'
+
+export default function About() {
+  return (
+    <section id="ueber-uns" className="py-24 bg-white px-6">
+      <div className="max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+          >
+            <p className="font-lato text-[#C9A84C] tracking-[0.3em] uppercase text-sm font-bold mb-4">
+              Über uns
+            </p>
+            <h2 className="font-playfair text-4xl font-bold text-[#5a4a52] leading-tight mb-6">
+              Mehr als ein Nagelsalon — ein Ort zum Wohlfühlen
+            </h2>
+            <p className="font-lato text-[#7a6a72] leading-relaxed mb-4">
+              Kawaii Nails entstand aus einer Leidenschaft für Schönheit, Kreativität und Selbstausdruck. Was 2020 als kleines Berliner Studio begann, ist heute ein Ort, an dem sich Hunderte von Kundinnen und Kunden zuhause fühlen.
+            </p>
+            <p className="font-lato text-[#7a6a72] leading-relaxed mb-8">
+              Unser Team aus erfahrenen Nail Artists vereint traditionelles Handwerk mit modernsten Trends aus Asien und Europa. Jedes Set ist ein Unikat — abgestimmt auf deine Persönlichkeit, dein Leben und deinen Stil.
+            </p>
+
+            <div className="grid grid-cols-3 gap-6">
+              {[
+                { number: '500+', label: 'Zufriedene Kunden' },
+                { number: '5+', label: 'Jahre Erfahrung' },
+                { number: '4.9★', label: 'Google Bewertung' },
+              ].map((stat) => (
+                <div key={stat.label} className="text-center">
+                  <div className="font-playfair text-2xl font-bold text-[#C9A84C]">{stat.number}</div>
+                  <div className="font-lato text-xs text-[#7a6a72] mt-1">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="relative"
+          >
+            <div
+              className="rounded-3xl overflow-hidden aspect-[4/5] flex items-center justify-center relative"
+              style={{ background: 'linear-gradient(135deg, #FFD6E3 0%, #FFE4CC 100%)' }}
+            >
+              <div className="text-center">
+                <div className="text-7xl mb-4">💆‍♀️</div>
+                <p className="font-lato text-[#7a6a72] text-sm">Team-Foto kommt bald</p>
+              </div>
+              <div className="absolute top-4 right-4 bg-white/80 backdrop-blur rounded-2xl p-3 shadow-sm">
+                <p className="font-playfair text-xs text-[#5a4a52] font-semibold">Kawaii Nails</p>
+                <p className="font-lato text-xs text-[#C9A84C]">Berlin Mitte ✨</p>
+              </div>
+            </div>
+
+            <motion.div
+              animate={{ y: [0, -8, 0] }}
+              transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+              className="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-lg p-4 border border-pink-light"
+            >
+              <p className="font-lato text-xs text-[#7a6a72]">Nächster freier Termin</p>
+              <p className="font-playfair text-sm font-bold text-[#5a4a52]">Heute noch verfügbar</p>
+            </motion.div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  )
+}

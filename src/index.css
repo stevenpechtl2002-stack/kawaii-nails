@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: #FFF5F8;
+  font-family: 'Lato', sans-serif;
+  color: #5a4a52;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  width: 100%;
+  max-width: 100%;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #5a4a52;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.gold-underline {
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #C9A84C, #E8CC82);
+  border-radius: 9999px;
+  margin: 0 auto 3rem;
+}
