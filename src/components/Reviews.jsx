@@ -2,25 +2,46 @@ import { motion } from 'framer-motion'
 
 const reviews = [
   {
-    name: 'Sophie K.',
-    avatar: '👩',
+    name: 'Melisa da Silva',
+    avatar: 'M',
     rating: 5,
-    date: 'März 2025',
-    text: 'Absolut begeistert! Die Nägel halten schon seit 4 Wochen und sehen immer noch perfekt aus. Das Team ist super freundlich und die Atmosphäre ist einfach traumhaft. Komme definitiv wieder!',
+    date: 'Google Rezension',
+    text: 'Wenn ich meine Nägel machen lasse, dann nur HIER! Ich bin schon länger hier Kunde und bin immer zufrieden mit den Ergebnissen. Egal welche Wunsch-Nägel ich hatte, hier hat man mir diese erfüllt!',
   },
   {
-    name: 'Lena M.',
-    avatar: '👩‍🦱',
+    name: 'Linda Dorothea H.',
+    avatar: 'L',
     rating: 5,
-    date: 'April 2025',
-    text: 'Mein neuer Lieblingssalon! Die Nail Artists haben meine Wünsche perfekt umgesetzt — ich hatte gar keine richtige Vorstellung und sie haben einfach magisches draus gemacht. ✨',
+    date: 'Google Rezension',
+    text: 'Ich lasse mir seit vielen Jahren bei Kawaii Nails die Nägel machen und kann die Arbeit von Christy ohne Bedenken weiterempfehlen! 💖 Farbe, Form und auch die Länge sind immer wie ich es mir wünsche. 🤩',
   },
   {
-    name: 'Julia R.',
-    avatar: '👩‍🦰',
+    name: 'Ebru C.',
+    avatar: 'E',
     rating: 5,
-    date: 'April 2025',
-    text: 'Ich war schon in vielen Salons in Berlin, aber Kawaii Nails ist einfach unschlagbar. Die Qualität, das Design, der Service — alles top. Kann ich nur empfehlen!',
+    date: 'Google Rezension',
+    text: 'Super schöne Nägel, tolle Arbeit und sehr freundlich – absolut empfehlenswert! 💅😊',
+  },
+  {
+    name: 'Cora MMZ',
+    avatar: 'C',
+    rating: 5,
+    date: 'Google Rezension',
+    text: 'Ich bin sehr zufrieden, war heute das erste Mal bei Jade. Es war ein sehr freundlicher Empfang. Ich habe mich sofort wohl gefühlt und bin mit den Wimpern sehr zufrieden. Preisleistung stimmt — habe schon einen neuen Termin gemacht.',
+  },
+  {
+    name: 'Daniela Wendt',
+    avatar: 'D',
+    rating: 5,
+    date: 'Google Rezension',
+    text: 'Ich war heute das erste Mal ohne Termin im Salon. Kam direkt dran, habe ein Foto gezeigt wie meine Nägel aussehen sollen — nach 30–45 Min. war ich schon fertig und das Ergebnis ist super. Liebe meine Nägel 😍',
+  },
+  {
+    name: 'Stephan Kaschny',
+    avatar: 'S',
+    rating: 5,
+    date: 'Google Rezension',
+    text: 'Mitten auf der belebten Venloer Straße ist dieses saubere, nett geführte Studio. Als Mann eher einer der seltenen Gäste wurde ich nett empfangen und dann von Steven mit viel Können im luxuriösen Ledersessel mit Massagefunktion sehr gut bedient.',
   },
 ]
 
@@ -65,7 +86,7 @@ export default function Reviews() {
           </div>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {reviews.map((r, i) => (
             <motion.div
               key={r.name}
@@ -76,7 +97,7 @@ export default function Reviews() {
               className="bg-white rounded-3xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300 border border-pink-light/50"
             >
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-full bg-pink-light flex items-center justify-center text-xl">
+                <div className="w-10 h-10 rounded-full bg-[#FFB5C8] flex items-center justify-center font-playfair font-bold text-white text-sm">
                   {r.avatar}
                 </div>
                 <div>
