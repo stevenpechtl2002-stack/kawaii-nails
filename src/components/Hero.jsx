@@ -96,7 +96,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="font-lato text-[#C9A84C] tracking-[0.3em] uppercase text-sm font-bold mb-6"
           >
-            Nagelsalon Berlin
+            Nagelsalon Köln · Ehrenfeld
           </motion.p>
 
           <h1 className="font-playfair text-5xl md:text-6xl font-bold text-[#5a4a52] leading-tight mb-6">
@@ -119,7 +119,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 1.1 }}
             className="font-lato text-[#7a6a72] text-lg md:text-xl mb-10 leading-relaxed"
           >
-            Wir zaubern dir Nägel, die zu dir passen — verspielt, elegant und immer einzigartig.
+            Wenn Nägel zu echten Kunstwerken werden sollen, sind wir die perfekte Adresse! Besuche uns im Kölner Stadtteil Ehrenfeld.
           </motion.p>
 
           <motion.div
@@ -152,7 +152,7 @@ export default function Hero() {
             <span className="w-px h-4 bg-[#FFB5C8]" />
             <span>500+ Kunden</span>
             <span className="w-px h-4 bg-[#FFB5C8]" />
-            <span>Berlin Mitte</span>
+            <span>Köln Ehrenfeld</span>
           </motion.div>
         </div>
 
@@ -175,7 +175,7 @@ export default function Hero() {
               className="absolute -top-4 -right-4 bg-white rounded-2xl shadow-lg p-3"
             >
               <p className="font-playfair text-xs text-[#5a4a52] font-semibold">Kawaii Nails</p>
-              <p className="font-lato text-xs text-[#C9A84C]">✨ Berlin</p>
+              <p className="font-lato text-xs text-[#C9A84C]">✨ Köln</p>
             </motion.div>
             <motion.div
               animate={{ y: [0, 8, 0] }}

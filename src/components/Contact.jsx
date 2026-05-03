@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion'
 
 const info = [
-  { icon: '📍', label: 'Adresse', value: 'Musterstraße 1, 10115 Berlin' },
-  { icon: '📞', label: 'Telefon', value: '030 123456', href: 'tel:030123456' },
-  { icon: '📸', label: 'Instagram', value: '@kawaii.nails.berlin', href: 'https://instagram.com/kawaii.nails.berlin' },
-  { icon: '🕐', label: 'Öffnungszeiten', value: 'Mo–Sa 10:00–19:00 Uhr' },
+  { icon: '📍', label: 'Adresse', value: 'Venloer Straße 305, 50823 Köln (Ehrenfeld)' },
+  { icon: '📞', label: 'Telefon', value: '(+49) 221 168 540 93', href: 'tel:+4922116854093' },
+  { icon: '💬', label: 'WhatsApp', value: '0221-16854093', href: 'https://wa.me/4922116854093' },
+  { icon: '✉️', label: 'E-Mail', value: 'kawaiinails@hotmail.de', href: 'mailto:kawaiinails@hotmail.de' },
 ]
 
 export default function Contact() {
@@ -81,7 +81,7 @@ export default function Contact() {
               </motion.div>
               <div className="bg-white/90 rounded-2xl px-6 py-3 text-center shadow-sm">
                 <p className="font-playfair font-bold text-[#5a4a52]">Kawaii Nails</p>
-                <p className="font-lato text-sm text-[#7a6a72]">Musterstraße 1, 10115 Berlin</p>
+                <p className="font-lato text-sm text-[#7a6a72]">Venloer Straße 305, 50823 Köln</p>
               </div>
               <div className="absolute bottom-4 right-4 bg-white/80 rounded-xl px-3 py-1">
                 <p className="font-lato text-xs text-[#7a6a72]">Karte folgt bald</p>
@@ -106,19 +106,21 @@ export default function Contact() {
       >
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
-            <span className="text-xl">🌸</span>
-            <span className="font-playfair font-bold text-[#5a4a52]">Kawaii Nails</span>
+            <img src="/images/logo.png" alt="Kawaii Nails" className="h-8 w-auto" />
           </div>
-          <p className="font-lato text-xs text-[#7a6a72] text-center">
-            © 2025 Kawaii Nails Berlin · Musterstraße 1 · 030 123456
-          </p>
+          <div className="text-center">
+            <p className="font-lato text-xs text-[#7a6a72]">
+              © 2025 Kawaii Nails · Inh. Thu Thuy Wu · Venloer Straße 305 · 50823 Köln
+            </p>
+            <p className="font-lato text-xs text-[#7a6a72] mt-1">
+              Tel: (+49) 221 168 540 93 · kawaiinails@hotmail.de
+            </p>
+          </div>
           <a
-            href="https://instagram.com/kawaii.nails.berlin"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="mailto:kawaiinails@hotmail.de"
             className="font-lato text-xs text-[#C9A84C] hover:text-[#A07830] transition-colors"
           >
-            @kawaii.nails.berlin
+            kawaiinails@hotmail.de
           </a>
         </div>
       </motion.footer>

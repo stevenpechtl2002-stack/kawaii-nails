@@ -15,13 +15,13 @@ export default function About() {
               Über uns
             </p>
             <h2 className="font-playfair text-4xl font-bold text-[#5a4a52] leading-tight mb-6">
-              Mehr als ein Nagelsalon — ein Ort zum Wohlfühlen
+              Lust auf Fresh &amp; Freaky?
             </h2>
             <p className="font-lato text-[#7a6a72] leading-relaxed mb-4">
-              Kawaii Nails entstand aus einer Leidenschaft für Schönheit, Kreativität und Selbstausdruck. Was 2020 als kleines Berliner Studio begann, ist heute ein Ort, an dem sich Hunderte von Kundinnen und Kunden zuhause fühlen.
+              Wenn Nägel zu echten Kunstwerken werden sollen, sind wir die perfekte Adresse! Wir von Kawaii Nails erfüllen Deine Wünsche für tolle, kreative Nageldesigns.
             </p>
             <p className="font-lato text-[#7a6a72] leading-relaxed mb-8">
-              Unser Team aus erfahrenen Nail Artists vereint traditionelles Handwerk mit modernsten Trends aus Asien und Europa. Jedes Set ist ein Unikat — abgestimmt auf deine Persönlichkeit, dein Leben und deinen Stil.
+              Besuche unseren Salon im Kölner Stadtteil Ehrenfeld und lass es dir mal wieder richtig gut gehen! Wir freuen uns auf dich — buche deinen Termin einfach online oder per WhatsApp.
             </p>
 
             <div className="grid grid-cols-3 gap-6">
@@ -65,7 +65,7 @@ export default function About() {
 
             <div className="absolute top-4 right-4 bg-white/80 backdrop-blur rounded-2xl p-3 shadow-sm">
               <p className="font-playfair text-xs text-[#5a4a52] font-semibold">Kawaii Nails</p>
-              <p className="font-lato text-xs text-[#C9A84C]">Berlin Mitte ✨</p>
+              <p className="font-lato text-xs text-[#C9A84C]">Köln Ehrenfeld ✨</p>
             </div>
 
             <motion.div

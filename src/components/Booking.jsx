@@ -46,7 +46,15 @@ export default function Booking() {
           <h2 className="section-title">Termin buchen</h2>
           <span className="gold-underline" />
           <p className="font-lato text-[#7a6a72] mt-2">
-            Füll das Formular aus und wir melden uns innerhalb von 24h bei dir.
+            Füll das Formular aus oder schreib uns direkt per{' '}
+            <a
+              href="https://wa.me/4922116854093"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#C9A84C] font-bold hover:underline"
+            >
+              WhatsApp: 0221-16854093
+            </a>
           </p>
         </motion.div>
 
