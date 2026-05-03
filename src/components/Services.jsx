@@ -3,41 +3,54 @@ import { motion } from 'framer-motion'
 const services = [
   {
     icon: '💅',
-    title: 'Gelnägel',
-    desc: 'Langanhaltende Gelnägel in jeder Form und Länge — von natürlich bis dramatisch.',
+    title: 'Gel & Bio Gel',
+    desc: 'Langanhaltende Gelmodellagen und Bio Gelnägel in jeder Form und Länge — ab 35 €',
   },
   {
     icon: '✨',
-    title: 'Acryl',
-    desc: 'Robuste Acrylmodellage für maximale Länge und perfekte Stabilität.',
+    title: 'Acrylmodellagen',
+    desc: 'Robuste Acrylmodellage für maximale Länge und perfekte Stabilität — ab 25 €',
   },
   {
-    icon: '🎨',
-    title: 'Nageldesign',
-    desc: 'Von klassisch bis extravagant — wir setzen deine Wünsche kreativ um.',
+    icon: '💎',
+    title: 'Shellac',
+    desc: 'Hält 2–3 Wochen ohne Absplittern — perfekt für gepflegte Nägel — ab 20 €',
   },
   {
     icon: '🌸',
-    title: 'Maniküre',
-    desc: 'Klassische Pflege für gepflegte Hände: Feilen, Formen, Lackieren.',
+    title: 'Nagelpflege & Maniküre',
+    desc: 'Klassische Nagelpflege für Damen und Herren, Feilen, Formen, Lackieren — ab 10 €',
   },
   {
     icon: '🦋',
-    title: 'Pediküre',
-    desc: 'Verwöhnprogramm für deine Füße — Hornhautentfernung und Pflege inklusive.',
+    title: 'Pediküre & Zehenmodellage',
+    desc: 'Verwöhnprogramm für Füße, Hornhautentfernung und Zehenmodellage — ab 40 €',
   },
   {
-    icon: '🌟',
-    title: 'Nail Art',
-    desc: 'Individuelle Kunstwerke auf deinen Nägeln: Glitzer, Folien, Sticker & mehr.',
+    icon: '🎨',
+    title: 'Nail Art & Extras',
+    desc: 'Glitzer, Folien, Sticker, Steine und individuelle Nageldesigns — ab 3 €',
+  },
+  {
+    icon: '👁️',
+    title: 'Wimpernverlängerung',
+    desc: '2D, 3D und klassische Wimpernverlängerungen für einen strahlenden Blick — ab 10 €',
+  },
+  {
+    icon: '🌿',
+    title: 'Gesichtsbehandlungen',
+    desc: 'Augenbrauen färben & zupfen, Wimpern färben und weitere Treatments — ab 20 €',
+  },
+  {
+    icon: '👑',
+    title: 'Permanent Make-Up',
+    desc: 'Professionelles Permanent Make-Up für dauerhaft perfekte Ergebnisse — ab 150 €',
   },
 ]
 
 const container = {
   hidden: {},
-  show: {
-    transition: { staggerChildren: 0.1 },
-  },
+  show: { transition: { staggerChildren: 0.08 } },
 }
 
 const item = {
@@ -76,13 +89,11 @@ export default function Services() {
               variants={item}
               whileHover={{ y: -8, scale: 1.02 }}
               transition={{ type: 'spring', stiffness: 300 }}
-              className="group bg-cream rounded-3xl p-8 cursor-default border-2 border-transparent hover:border-[#C9A84C] transition-colors duration-300 shadow-sm hover:shadow-md"
+              className="group rounded-3xl p-8 cursor-default border-2 border-transparent hover:border-[#C9A84C] transition-colors duration-300 shadow-sm hover:shadow-md"
               style={{ background: 'linear-gradient(135deg, #fff8fb, #fff0f5)' }}
             >
               <div className="text-4xl mb-4">{s.icon}</div>
-              <h3 className="font-playfair text-xl font-semibold text-[#5a4a52] mb-2">
-                {s.title}
-              </h3>
+              <h3 className="font-playfair text-xl font-semibold text-[#5a4a52] mb-2">{s.title}</h3>
               <p className="font-lato text-[#7a6a72] text-sm leading-relaxed">{s.desc}</p>
               <div className="mt-4 w-8 h-0.5 bg-[#FFB5C8] rounded-full group-hover:w-12 group-hover:bg-[#C9A84C] transition-all duration-300" />
             </motion.div>

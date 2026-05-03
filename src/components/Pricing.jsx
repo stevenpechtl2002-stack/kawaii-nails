@@ -1,51 +1,30 @@
 import { motion } from 'framer-motion'
 
-const packages = [
+const categories = [
   {
-    name: 'Basic',
-    price: '39',
-    tagline: 'Perfekt zum Einstieg',
-    icon: '🌸',
-    features: [
-      'Klassische Maniküre',
-      'Einfarbiger Gel-Lack',
-      'Nagelformung',
-      'Pflegebehandlung',
+    title: 'Nägel',
+    icon: '💅',
+    items: [
+      { name: 'Nagelpflege & Maniküre', price: 'ab 10 €' },
+      { name: 'Shellac (hält 2–3 Wochen)', price: 'ab 20 €' },
+      { name: 'Acrylmodellagen', price: 'ab 25 €' },
+      { name: 'Bio Gelnägel', price: 'ab 35 €' },
+      { name: 'Gelmodellagen', price: 'ab 35 €' },
+      { name: 'Zehenmodellage', price: 'ab 40 €' },
+      { name: 'Nail-Extras (Glitzer, Folien, Steine …)', price: 'ab 3 €' },
     ],
-    cta: 'Jetzt buchen',
-    highlight: false,
   },
   {
-    name: 'Premium',
-    price: '69',
-    tagline: 'Unser beliebtestes Paket',
+    title: 'Beauty',
     icon: '✨',
-    features: [
-      'Alles aus Basic',
-      'Gel-Modellage',
-      'Einfaches Nageldesign',
-      'French oder Ombre',
-      'Pflegeöl & Massage',
+    items: [
+      { name: 'Wimpernverlängerung', price: 'ab 10 €' },
+      { name: 'Augenbrauen färben & zupfen', price: '20 €' },
+      { name: 'Augenbrauen & Wimpern färben', price: '30 €' },
+      { name: 'Gesichtsbehandlungen', price: 'ab 39 €' },
+      { name: 'Kopfmassage', price: 'ab 60 €' },
+      { name: 'Permanent Make-Up', price: 'ab 150 €' },
     ],
-    cta: 'Jetzt buchen',
-    highlight: true,
-    badge: 'Beliebt',
-  },
-  {
-    name: 'Luxe',
-    price: '99',
-    tagline: 'Das volle Verwöhnerlebnis',
-    icon: '👑',
-    features: [
-      'Alles aus Premium',
-      'Komplexes Nail Art',
-      'Glitzer & Folien',
-      'Handpeeling & Maske',
-      'Paraffin-Behandlung',
-      'Nachhause-Pflegeset',
-    ],
-    cta: 'Jetzt buchen',
-    highlight: false,
   },
 ]
 
@@ -63,79 +42,66 @@ export default function Pricing() {
           <p className="font-lato text-[#C9A84C] tracking-[0.3em] uppercase text-sm font-bold mb-3">
             Transparente Preise
           </p>
-          <h2 className="section-title">Unsere Pakete</h2>
+          <h2 className="section-title">Preisliste</h2>
           <span className="gold-underline" />
+          <p className="font-lato text-[#7a6a72] mt-4 text-sm">
+            Alle Preise inklusive Material. Individuelle Wünsche auf Anfrage.
+          </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
-          {packages.map((pkg, i) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {categories.map((cat, ci) => (
             <motion.div
-              key={pkg.name}
+              key={cat.title}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className={`relative rounded-3xl p-8 ${
-                pkg.highlight
-                  ? 'bg-[#5a4a52] text-white shadow-2xl scale-105 border-2 border-[#C9A84C]'
-                  : 'bg-cream border-2 border-pink-light shadow-sm'
-              }`}
-              style={!pkg.highlight ? { background: 'linear-gradient(135deg, #fff8fb, #fff0f5)' } : {}}
+              transition={{ duration: 0.5, delay: ci * 0.15 }}
+              className="rounded-3xl overflow-hidden shadow-sm border border-pink-100"
+              style={{ background: 'linear-gradient(135deg, #fff8fb, #fff0f5)' }}
             >
-              {pkg.badge && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#C9A84C] text-white font-lato font-bold text-xs px-4 py-1.5 rounded-full shadow-md">
-                  {pkg.badge}
-                </div>
-              )}
-
-              <div className="text-4xl mb-4">{pkg.icon}</div>
-              <h3 className={`font-playfair text-2xl font-bold mb-1 ${pkg.highlight ? 'text-white' : 'text-[#5a4a52]'}`}>
-                {pkg.name}
-              </h3>
-              <p className={`font-lato text-xs mb-6 ${pkg.highlight ? 'text-pink-light' : 'text-[#7a6a72]'}`}>
-                {pkg.tagline}
-              </p>
-
-              <div className="mb-6">
-                <span className={`font-playfair text-5xl font-bold ${pkg.highlight ? 'text-[#E8CC82]' : 'text-[#C9A84C]'}`}>
-                  {pkg.price}€
-                </span>
-                <span className={`font-lato text-sm ml-1 ${pkg.highlight ? 'text-pink-light' : 'text-[#7a6a72]'}`}>
-                  / Termin
-                </span>
+              <div className="px-8 py-5 border-b border-pink-100 flex items-center gap-3"
+                style={{ background: 'linear-gradient(135deg, #5a4a52, #7a5a66)' }}
+              >
+                <span className="text-2xl">{cat.icon}</span>
+                <h3 className="font-playfair text-xl font-bold text-white">{cat.title}</h3>
               </div>
 
-              <ul className="space-y-3 mb-8">
-                {pkg.features.map((f) => (
-                  <li key={f} className="flex items-center gap-2 font-lato text-sm">
-                    <span className={pkg.highlight ? 'text-[#E8CC82]' : 'text-[#C9A84C]'}>✓</span>
-                    <span className={pkg.highlight ? 'text-white/90' : 'text-[#5a4a52]'}>{f}</span>
-                  </li>
+              <ul className="divide-y divide-pink-100/60">
+                {cat.items.map((item, i) => (
+                  <motion.li
+                    key={item.name}
+                    initial={{ opacity: 0, x: -10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: ci * 0.1 + i * 0.05 }}
+                    className="flex items-center justify-between px-8 py-4 hover:bg-pink-50/50 transition-colors duration-150"
+                  >
+                    <span className="font-lato text-sm text-[#5a4a52]">{item.name}</span>
+                    <span className="font-lato text-sm font-bold text-[#C9A84C] whitespace-nowrap ml-4">
+                      {item.price}
+                    </span>
+                  </motion.li>
                 ))}
               </ul>
-
-              <a
-                href="#termin"
-                className={`block text-center font-lato font-bold py-3 rounded-full transition-all duration-200 ${
-                  pkg.highlight
-                    ? 'bg-[#C9A84C] hover:bg-[#E8CC82] text-white'
-                    : 'bg-[#FFB5C8] hover:bg-[#FF8FAD] text-white'
-                }`}
-              >
-                {pkg.cta}
-              </a>
             </motion.div>
           ))}
         </div>
 
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center font-lato text-[#7a6a72] text-sm mt-8"
+          transition={{ delay: 0.3 }}
+          className="text-center mt-10"
         >
-          Alle Preise inklusive Material. Individuelle Wünsche auf Anfrage.
-        </motion.p>
+          <a
+            href="#termin"
+            className="inline-block bg-[#C9A84C] hover:bg-[#A07830] text-white font-lato font-bold px-10 py-4 rounded-full shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+          >
+            ✨ Jetzt Termin buchen
+          </a>
+        </motion.div>
       </div>
     </section>
   )
