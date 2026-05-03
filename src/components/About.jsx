@@ -27,7 +27,7 @@ export default function About() {
             <div className="grid grid-cols-3 gap-6">
               {[
                 { number: '10.000+', label: 'Zufriedene Kunden' },
-                { number: '5+', label: 'Jahre Erfahrung' },
+                { number: '10+', label: 'Jahre Erfahrung' },
                 { number: '4.9★', label: 'Google Bewertung' },
               ].map((stat) => (
                 <div key={stat.label} className="text-center">
