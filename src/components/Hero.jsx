@@ -150,7 +150,7 @@ export default function Hero() {
           >
             <span>⭐ 4.9 Google</span>
             <span className="w-px h-4 bg-[#FFB5C8]" />
-            <span>500+ Kunden</span>
+            <span>10.000+ Kunden</span>
             <span className="w-px h-4 bg-[#FFB5C8]" />
             <span>Köln Ehrenfeld</span>
           </motion.div>
