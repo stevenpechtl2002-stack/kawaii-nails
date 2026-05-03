@@ -68,31 +68,17 @@ export default function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="rounded-3xl overflow-hidden aspect-video relative"
-            style={{ background: 'linear-gradient(135deg, #FFD6E3 0%, #FFE4CC 50%, #FFD6E3 100%)' }}
+            className="rounded-3xl overflow-hidden aspect-video relative shadow-md"
           >
-            <div className="absolute inset-0 flex flex-col items-center justify-center">
-              <motion.div
-                animate={{ y: [0, -8, 0] }}
-                transition={{ duration: 2, repeat: Infinity }}
-                className="text-5xl mb-3"
-              >
-                📍
-              </motion.div>
-              <div className="bg-white/90 rounded-2xl px-6 py-3 text-center shadow-sm">
-                <p className="font-playfair font-bold text-[#5a4a52]">Kawaii Nails</p>
-                <p className="font-lato text-sm text-[#7a6a72]">Venloer Straße 305, 50823 Köln</p>
-              </div>
-              <div className="absolute bottom-4 right-4 bg-white/80 rounded-xl px-3 py-1">
-                <p className="font-lato text-xs text-[#7a6a72]">Karte folgt bald</p>
-              </div>
-            </div>
-
-            <div
-              className="absolute inset-0 opacity-10"
-              style={{
-                backgroundImage: 'repeating-linear-gradient(0deg, transparent, transparent 30px, #FFB5C8 30px, #FFB5C8 31px), repeating-linear-gradient(90deg, transparent, transparent 30px, #FFB5C8 30px, #FFB5C8 31px)',
-              }}
+            <iframe
+              title="Kawaii Nails Standort"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2513.6!2d6.9205!3d50.9489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bf25a9b3c3e6c7%3A0x0!2sVenloer+Stra%C3%9Fe+305%2C+50823+K%C3%B6ln!5e0!3m2!1sde!2sde!4v1"
+              width="100%"
+              height="100%"
+              style={{ border: 0, position: 'absolute', inset: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
             />
           </motion.div>
         </div>
