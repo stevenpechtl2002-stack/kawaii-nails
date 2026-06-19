@@ -33,13 +33,13 @@ export default function Booking() {
           className="flex flex-col items-center gap-5"
         >
           <a
-            href="https://www.zentime.io/salon/kawaii-nails"
+            href="https://www.treatwell.de/ort/kawaii-nails/"
             target="_blank"
             rel="noopener noreferrer"
             className="w-full max-w-sm bg-[#C9A84C] hover:bg-[#A07830] text-white font-lato font-bold text-lg px-8 py-5 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex items-center justify-center gap-3"
           >
             <span>✨</span>
-            <span>Online buchen via ZenTime</span>
+            <span>Online buchen via Treatwell</span>
           </a>
 
           <p className="font-lato text-[#7a6a72] text-sm mt-2">
